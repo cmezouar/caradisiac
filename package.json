@@ -1,0 +1,30 @@
+{
+  "name": "caradisiac",
+  "version": "1.0.0",
+  "description": "API that gets the list of cars with the higher rate and the higher volume.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmezouar/caradisiac.git"
+  },
+  "keywords": [
+    "caradisiac",
+    "api"
+  ],
+  "author": "Chloé Mezouar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmezouar/caradisiac/issues"
+  },
+  "homepage": "https://github.com/cmezouar/caradisiac#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "node-car-api": "git+https://github.com/92bondstreet/node-car-api.git"
+  }
+}

@@ -20,21 +20,30 @@ async function get_Models (brand) {
 //var car_Brands = get_Brands();
 
 async function buildResult (){
-    var prevJson = [];
+    var prevJson ={
+        "brand_name": " ",
+        "models":[{
+
+        }]
+    };
     get_Brands().then(function(brands){
         async.each(brands,function(brand){
             //console.log(brand);
+            prevJson.brand_name=brand;
+            console.log(prevJson);
             get_Models(brand).then(function(models){
                 async.each(models, function(model){
-                    prevJson.push(model);
-                    //console.log(model);
-                })            
-            })
+                if(prevJson.brand_name==model.brand){
+                    prevJson.models.push(model);
+                }
+                }); 
+                //console.log(prevJson);           
+            });
 
-        })
-    })
-    return prevJson;
-    console.log(prevJson);
+        });
+        return prevJson;
+    });
+    
     
 };
 
